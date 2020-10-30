@@ -5,7 +5,9 @@ class ProductsLocators(object):
   """A class for products page locators. All products page locators should come here"""
   IMG_BROKEN = (By.XPATH, '//img[contains(@src, "jpgWithGarbageOnItToBreakTheUrl")]')
   CART_ITEM = "//div[@class='inventory_list']//div[@class='inventory_item']["
-
+  LABEL_SHOPPING_CART_BADGE = ""
+  shopping_cart_container
+  
   def LABEL_PRODUCT_IMG(index):
     ITEM = "]//div[@class='inventory_item_img']//img"
     return (By.XPATH, (ProductsLocators.CART_ITEM + str(index) + ITEM))

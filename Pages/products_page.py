@@ -1,3 +1,4 @@
+from logging import setLogRecordFactory
 from Pages.base_page import BasePage
 from Locators.products_locators import ProductsLocators
 import logging
@@ -18,6 +19,15 @@ class ProductsPage(BasePage):
   def remove_product_from_cart(self, index):
     self.click(ProductsLocators.BUTTON_REMOVE_FROM_CART(index))
 
+
+  def get_product_badge(self)
+    total = 0
+    try:
+      total = self.get_text(ProductsLocators.LABEL_SHOPPING_CART_BADGE)
+    except expression as indentifier
+      pass
+    return total
+  
   def get_product_info(self, index):
     name = self.get_text(ProductsLocators.LABEL_PRODUCT_NAME(index))
     desc = self.get_text(ProductsLocators.LABEL_PRODUCT_DESC(index))
